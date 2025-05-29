@@ -1,11 +1,39 @@
 #!/bin/bash
 
+if command -v nala >/dev/null 2>&1; then
+  echo "Nala is installed"
+else
+  echo "Nala is NOT installed. You can install it with: sudo apt install nala"
+fi
+
 if [ -e "$HOME/.oh-my-bash" ]; then
   echo "Oh my bash downloaded!"
 else
-  echo "Oh my bash not downloaded"
+  echo "Oh my bash not downloaded. Downloading"
   bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 fi
+
+if command -v lolcat >/dev/null 2>&1; then
+  echo "lolcat is installed"
+else
+  echo "lolcat is NOT installed. Installing"
+  sudo nala install lolcat
+fi
+
+if command -v fortune >/dev/null 2>&1; then
+  echo "fortune is installed"
+else
+  echo "fortune is NOT installed. Installing..."
+    sudo nala install fortune
+fi
+
+if command -v cowsay >/dev/null 2>&1; then
+  echo "cowsay is installed"
+else
+  echo "cowsay is NOT installed. Installing..."
+    sudo nala install cowsay   
+fi
+
 
 echo 'Starting script...'
 echo 'copy my file to home' 
