@@ -13,27 +13,19 @@ else
   bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 fi
 
+if command -v neofetch >/dev/null 2>&1; then
+  echo "neofetch is installed"
+else
+  echo "neofetch is NOT installed. Installing..."
+    sudo nala install neofetch   
+fi
+
 if command -v lolcat >/dev/null 2>&1; then
   echo "lolcat is installed"
 else
-  echo "lolcat is NOT installed. Installing"
-  sudo nala install lolcat
+  echo "lolcat is NOT installed. Installing..."
+    sudo nala install lolcat   
 fi
-
-if command -v fortune >/dev/null 2>&1; then
-  echo "fortune is installed"
-else
-  echo "fortune is NOT installed. Installing..."
-    sudo nala install fortune
-fi
-
-if command -v cowsay >/dev/null 2>&1; then
-  echo "cowsay is installed"
-else
-  echo "cowsay is NOT installed. Installing..."
-    sudo nala install cowsay   
-fi
-
 
 echo 'Starting script...'
 echo 'copy my file to home' 
