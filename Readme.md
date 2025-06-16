@@ -11,7 +11,7 @@ A minimal, customizable set of Bash configuration files to enhance your terminal
 ### Clone the Repository
 
 ```bash
-git clone https://gitlab.com/pessoal1761115/my-confs/bash-config ~/.configs/bash-config
+git clone https://github.com/davieduardo001/bash-config ~/configs/bash-config
 ```
 
 ### Apply the Configuration
