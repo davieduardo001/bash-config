@@ -13,18 +13,11 @@ else
   bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 fi
 
-if command -v neofetch >/dev/null 2>&1; then
-  echo "neofetch is installed"
-else
-  echo "neofetch is NOT installed. Installing..."
-    sudo nala install neofetch   
-fi
-
 if command -v lolcat >/dev/null 2>&1; then
   echo "lolcat is installed"
 else
   echo "lolcat is NOT installed. Installing..."
-    sudo nala install lolcat   
+    sudo dnf install lolcat   
 fi
 
 echo 'Starting script...'
