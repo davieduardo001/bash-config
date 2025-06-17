@@ -1,23 +1,17 @@
 #!/bin/bash
 
-if command -v nala >/dev/null 2>&1; then
-  echo "Nala is installed"
-else
-  echo "Nala is NOT installed. You can install it with: sudo apt install nala"
-fi
-
-if [ -e "$HOME/.oh-my-bash" ]; then
-  echo "Oh my bash downloaded!"
-else
-  echo "Oh my bash not downloaded. Downloading"
-  bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
-fi
-
 if command -v lolcat >/dev/null 2>&1; then
   echo "lolcat is installed"
 else
   echo "lolcat is NOT installed. Installing..."
     sudo dnf install lolcat   
+fi
+
+if command -v fastfetch >/dev/null 2>&1; then
+  echo "lolcat is fastfetch"
+else
+  echo "fastfetch is NOT installed. Installing..."
+    sudo dnf install fastfetch   
 fi
 
 echo 'Starting script...'
