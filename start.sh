@@ -1,12 +1,5 @@
 #!/bin/bash
 
-if command -v lolcat >/dev/null 2>&1; then
-  echo "lolcat is installed"
-else
-  echo "lolcat is NOT installed. Installing..."
-    sudo dnf install lolcat   
-fi
-
 if command -v fastfetch >/dev/null 2>&1; then
   echo "lolcat is fastfetch"
 else
