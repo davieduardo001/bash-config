@@ -30,3 +30,11 @@ elif command -v dnf >/dev/null 2>&1; then
       sudo apt install fastfetch
    fi
 fi
+
+# verify if the configuration whas applied
+if [ -d "$HOME/configs/fastfetch-my-conf" ]; then
+   echo 'configs whas installed'
+else
+   echo 'installing fastfetch'
+   git clone git@github.com:davieduardo001/fastfetch-my-conf.git "$HOME/configs/fastfetch-my-conf"
+fi
