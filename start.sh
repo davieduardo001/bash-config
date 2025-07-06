@@ -5,6 +5,9 @@ echo 'copy my file to home'
 
 # dependecies
 chmod +x ./src/fastfetch-installation.sh
+./src/fastfetch-installation.sh
+chmod +x ./src/pyenv.sh
+./src/pyenv.sh
 
 ## commands
 cp $HOME/configs/bash-config/bash.config $HOME/
