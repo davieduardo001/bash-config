@@ -5,16 +5,33 @@ echo 'copy my file to home'
 
 # Arch instalation
 if command -v pacman >/dev/null 2>&1; then
-   echo 'Prociding with the arch installation'
+   echo 'Using arch btw :p'
 
    if command -v fastfetch >/dev/null 2>&1; then
-      echo "lolcat is fastfetch"
+      echo "fastfetch its installed"
    else
       echo "fastfetch is NOT installed. Installing..."
       yay -S fastfetch   
-   fi
+   fi # DNF installation
 elif command -v dnf >/dev/null 2>&1; then
-    echo 'its using dnf'
+    echo 'Using Fedora'
+
+   if command -v fastfetch >/dev/null 2>&1; then
+      echo "fastfetch its installed"
+   else
+      echo "fastfetch is NOT installed. Installing..."
+      sudo dnf install fastfetch
+   fi
+# APT installation
+elif command -v dnf >/dev/null 2>&1; then
+    echo 'Using Ubuntu based linux .-.'
+
+   if command -v fastfetch >/dev/null 2>&1; then
+      echo "fastfetch its installed"
+   else
+      echo "fastfetch is NOT installed. Installing..."
+      sudo apt install fastfetch
+   fi
 fi
 
 ## commands
